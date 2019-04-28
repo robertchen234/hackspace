@@ -30,9 +30,11 @@ class NavBar extends Component {
     return (
       <Navbar color="info" fixed="top" active={open}>
         <Navbar.Brand>
-          <Navbar.Item>
-            <p>HaCkSpAce</p>
-          </Navbar.Item>
+          <Link to="/">
+            <Navbar.Item>
+              <p>Hackspace</p>
+            </Navbar.Item>
+          </Link>
 
           <Navbar.Burger onClick={this.toggleNavBar} />
         </Navbar.Brand>
@@ -49,7 +51,7 @@ class NavBar extends Component {
                   <Navbar.Item>Events</Navbar.Item>
                 </Link>
 
-                <Link to="/eventshow">
+                <Link to="/eventsshow">
                   <Navbar.Item>Pitches</Navbar.Item>
                 </Link>
 

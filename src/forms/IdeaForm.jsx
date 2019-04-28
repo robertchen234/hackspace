@@ -57,12 +57,12 @@ class IdeaForm extends Component {
             <br />
 
             <select
-              className="category"
+              id="category"
               name="topic"
               value={this.state.value}
               onChange={this.changeHandler}
             >
-              <option value>Select Category</option>
+              ><option value>Select Category</option>
               <option value="e-commerce">E-commerce</option>
               <option value="jobs">Jobs</option>
               <option value="healthcare">HealthCare</option>

@@ -1,15 +1,19 @@
+@import "./utility";
+@import "~react-bulma-components/dist/react-bulma-components.min.css";
+
 .idea-container {
   display: grid;
   grid-column-start: 2;
 }
 .idea-card-info {
   width: 610px;
-  height: 337px;
+  height: auto;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
-  padding-top: 13px;
-  padding-left: 85px;
+  // padding-top: 13px;
+  // padding-left: 85px;
   margin-bottom: 15px;
+  padding: 4em;
 }
 .idea-card-info h5 {
   width: 179px;
@@ -85,10 +89,11 @@
   margin-top: 4px;
   margin-left: 10px;
 }
-.ideas-container {
-  display: grid;
-  grid-template-columns: repeat(3, 4fr);
-}
+// .ideas-container {
+//   display: grid;
+
+//   grid-template-columns: repeat(3, 4fr);
+// }
 .voting-title {
   width: 235px;
   height: 26px;
@@ -128,13 +133,14 @@
 
 .modalWindow {
   width: 611px;
-  height: 417px;
+  height: 500px;
   border-radius: 5px;
+  font-family: Sofia-Pro;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left: 40%;
   margin-top: 11%;
   margin-left: -25%;
 }
@@ -194,13 +200,13 @@
     border-radius: 4px;
     border: solid 1px #979797;
   }
-  .category {
+  #category {
     padding: 4px;
     margin-left: 250px;
   }
   .submitButton {
     padding: 7px;
-    margin-left: 275px;
+    margin-left: 50%;
     margin-top: 50px;
     font-size: 20px;
     background-color: #209cee;
@@ -293,8 +299,8 @@
   }
 
   .profileWindow {
-    width: 611px;
-    height: 550px;
+    width: 500px;
+    height: 7000px;
     border-radius: 5px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
@@ -316,4 +322,73 @@
   .profile-button {
     margin-left: 30px;
   }
+
+  .category-tag {
+    width: 169px;
+    height: 22px;
+    border-radius: 13px;
+    border: solid 1px #5d80ef;
+    background-color: #ffffff;
+    display: flex;
+  }
+  .category-tag h3 {
+    width: 132px;
+    height: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #5d80ef;
+    padding-left: 15px;
+    margin: auto;
+  }
+  .profile-photo img {
+    height: 200px;
+    width: auto;
+  }
+  // .idea-container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin: auto;
+  // }
+
+  img {
+    height: 88px;
+  }
+}
+
+.idea-container-boss {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: auto;
+  height: 40px;
+  background-color: #5d80ef;
+  border: white 1px solid;
+  border-radius: 25px;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.heart-div {
+  position: relative;
+  float: right;
 }
