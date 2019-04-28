@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import IdeasCard from "./IdeasCard";
+import { Link } from "react-router-dom";
 class IdeasContainer extends Component {
   state = {
     ideas: []
@@ -47,6 +48,9 @@ class IdeasContainer extends Component {
     return (
       <div>
         <button onClick={this.createTeams}>End Voting</button>
+        <Link to="/submitidea">
+          <button>Add an Idea</button>
+        </Link>
         <div className="idea-container idea-container-boss"> {ideas} </div>
       </div>
     );

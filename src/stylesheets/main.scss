@@ -387,8 +387,22 @@ button {
   letter-spacing: 0.3px;
   padding-left: 15px;
   margin-bottom: 15px;
+  color: white;
 }
 .heart-div {
   position: relative;
   float: right;
+}
+
+.secured-container {
+  display: flex;
+}
+
+.secured {
+  margin: auto;
+}
+
+.navbar-end a a,
+.navbar-item p {
+  color: white;
 }

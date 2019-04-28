@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class IdeaForm extends Component {
   state = {
@@ -13,15 +14,18 @@ class IdeaForm extends Component {
       [e.target.name]: e.target.value
     });
   };
+
   submitHandler = e => {
     e.preventDefault();
     this.props.createIdea(this.state);
+
+    setTimeout(() => this.props.history.push("/eventsshow"), 1000);
   };
 
   render() {
     return (
       <div className="modalWindow">
-        <h2 className="What-Is-Your-Idea"> What is you're Idea?</h2>
+        <h2 className="What-Is-Your-Idea"> What is your Idea?</h2>
         <div className="inputs">
           <form onSubmit={this.submitHandler}>
             <textarea
@@ -77,4 +81,4 @@ class IdeaForm extends Component {
   }
 }
 
-export default IdeaForm;
+export default withRouter(IdeaForm);

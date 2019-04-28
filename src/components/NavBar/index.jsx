@@ -55,6 +55,10 @@ class NavBar extends Component {
                   <Navbar.Item>Pitches</Navbar.Item>
                 </Link>
 
+                <Link to="/submitidea">
+                  <Navbar.Item>Enter an Idea</Navbar.Item>
+                </Link>
+
                 <Navbar.Item onClick={this.handleSignOut}>Sign Out</Navbar.Item>
               </React.Fragment>
             )}

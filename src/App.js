@@ -40,7 +40,7 @@ class App extends Component {
         userData
       });
     }
-    
+
     this.getUsers();
     this.getIdeas();
   };
@@ -49,11 +49,13 @@ class App extends Component {
     fetch("http://localhost:3000/api/v1/users")
       .then(res => res.json())
       .then(users => {
-        const userData = this.state.userSession.loadUserData();
-        let currentUser = users.find(
-          user => user.username === userData.username
-        );
-        this.setState({ users, currentUser });
+        if (this.state.userSession.isUserSignedIn()) {
+          const userData = this.state.userSession.loadUserData();
+          let currentUser = users.find(
+            user => user.username === userData.username
+          );
+          this.setState({ users, currentUser });
+        }
       });
   }
 
@@ -188,7 +190,10 @@ class App extends Component {
               joinTeam={this.joinTeam}
             />
           ) : (
-            <Login userSession={userSession} />
+            <div className="secured-container">
+              <Login userSession={userSession} />
+              <h3 className="secured">Hack securely with Blockchain Authentication</h3>
+            </div>
           )}
         </Container>
       </div>
