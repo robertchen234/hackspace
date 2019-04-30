@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+UI/UX https://vimeo.com/332952367
+
+Pitch https://docs.google.com/presentation/d/1mEDyrlPw1MB-0-CK_6d4hvmCrMPqa2h61QcrLbJ2iBE/edit#slide=id.g58ee1401d8_0_0
+
 ## Available Scripts
 
 In the project directory, you can run:

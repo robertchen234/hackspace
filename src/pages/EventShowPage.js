@@ -13,14 +13,16 @@ class EventShowPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ideas-container">
         <h1 className="voting-title"> Idea Voting Phase </h1>
         <h2 className="hack-event"> {this.props.event.title} </h2>
-        {this.state.phase === 1 ? (<div className="ideas-container">
-          <IdeasContainer
-            createVote={this.props.createVote}
-            changePhase={this.changePhase}
-          /></div>
+        {this.state.phase === 1 ? (
+          <div>
+            <IdeasContainer
+              createVote={this.props.createVote}
+              changePhase={this.changePhase}
+            />
+          </div>
         ) : (
           <TeamsContainer
             joinTeam={this.props.joinTeam}
